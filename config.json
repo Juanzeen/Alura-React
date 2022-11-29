@@ -2,6 +2,7 @@
     "name": "Juan Cristo",
     "desc": "Estudante do IFF Quissamã",
     "github": "Juanzeen",
+    "banner": "",
     "playlists": {
       "jogos": [
           {
@@ -130,5 +131,32 @@
           "thumb": "https://img.youtube.com/vi/0JWMVc1CqpA/hqdefault.jpg"
         }
       ]
-    }
+    },
+    "favorites": [
+      {
+        "criador": "Luan Gameplay",
+        "photo": "https://yt3.googleusercontent.com/ytc/AMLnZu96m1VS_Xc-0cg7iO7iZRrKsEYQVCbE6D9HurdqsA=s176-c-k-c0x00ffffff-no-rj-mo",
+        "link": "https://www.youtube.com/@luangameplay666"
+      },
+      {
+        "criador": "Tecnoart",
+        "photo": "https://yt3.googleusercontent.com/ytc/AMLnZu9rm2PCAq6taNp5ev_v8ia3EDdBs10apSNmlmPlIQ=s176-c-k-c0x00ffffff-no-rj-mo",
+        "link": "https://www.youtube.com/@tecnoart101"
+      }
+      ,{
+        "criador": "Djonga",
+        "photo": "https://yt3.googleusercontent.com/jrllnud87jiaeP4XYMBHpL9rV53SCK2p6X0GQdnsEiEQPvUgMz8EirG-I8nZ-kOeKMxxSDnbrw=s176-c-k-c0x00ffffff-no-rj-mo",
+        "link": "https://www.youtube.com/@DjongaGE"
+      },
+      {
+        "criador": "Podpah",
+        "photo": "https://yt3.ggpht.com/RLZMH949Rz-48oJCl3dtFohyUEE9dl6mGLuiaX-iYMQjUQya_ntkyZeWKnSLF95HoUvzDuHqk_Q=s176-c-k-c0x00ffffff-no-rj-mo",
+        "link": "https://www.youtube.com/@Podpah"
+      },
+      {
+        "criador": "Diogo Defante",
+        "photo": "https://yt3.ggpht.com/MxBcembTet1lQPFhAVIw-QeW5FrBofGZLzU2JfqRcbqPwq_sj6eVDZRNjPG_eAZOEDXnxcuW5xY=s176-c-k-c0x00ffffff-no-rj-mo",
+        "link": "https://www.youtube.com/@diogodefante"
+      }
+    ]
   }

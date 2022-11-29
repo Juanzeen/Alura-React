@@ -3,33 +3,31 @@ import styled from "styled-components";
 import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
+import { StyledFav } from "../src/components/Favorites";
+
+
 
 function HomePage() {
-    //console.log(config.playlists);
     return (
-    <>
-        <CSSReset/>
-        <div style={{
+        <>
+            <CSSReset />
+            <div style={{
                 display: "flex",
                 flexDirection: "column",
-                flex: 1,}}> 
-            <Menu/>
-            <Header/>
-            <Tl playlists={config.playlists} />
-        </div>
-       </>    
+                flex: 1,
+            }}>
+                <Menu />
+                <Header />
+                <Tl playlists={config.playlists} />
+                <Favorites favorites={config.favorites} />
+            </div>
+        </>
     )
 
 }
 export default HomePage
 
 const StyledHeader = styled.div`
-    img{
-        margin-top: 60px;
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-    }
     .infoU{
         display: flex;
         align-items: center;
@@ -37,19 +35,31 @@ const StyledHeader = styled.div`
         padding: 16px 32px ;
         gap: 16px;
     }
+
+    #giticon{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    .banner{
+        height: 30vh;
+        width: 100vw;
+    }
+
+    #desc{
+        opacity: 0.8;
+    }
    `;
 
 function Header() {
     return (
         <StyledHeader>
-            {/*< img src="banner"/>*/}
-
             <section className="InfoU">
-                <img src={`https://github.com/${config.github}.png`} />
-                <div>
-                    <h2>{config.name}</h2>
-                    <p>{config.desc}</p>
-                </div>
+                <img className="banner" src="https://media.sproutsocial.com/uploads/5b_youtube-cover-photo_labels@1x-1.png" alt="lala" />
+                <img className="perfil" id="giticon" src={`https://github.com/${config.github}.png`} />
+                    <h2 className="perfil" >{config.name}</h2> 
+                    <p id="desc">{config.desc}</p>
 
             </section>
 
@@ -73,7 +83,7 @@ function Tl(props) {
                         <div>
                             {videos.map((video) => {
                                 return (
-                                    <a href="video.url">
+                                    <a href={video.url}>
                                         <img src={video.thumb} />
                                         <span>
                                             {video.title}
@@ -84,7 +94,32 @@ function Tl(props) {
                         </div>
                     </section>
                 )
-            })};
+            })}
         </StyledTimeline>
     )
+}
+
+function Favorites (props){
+    const favs = props.favorites
+    return (
+        <StyledFav>
+            <h2>Favoritos</h2>
+            <div>
+                {favs.map(criadores => {
+                    return(
+                        <section>
+                        <h3>
+                            {criadores.criador}
+                        </h3>
+                        <a href={criadores.link}>
+                        <img src={criadores.photo}/>
+                        </a>
+                        </section>
+                    )
+                })}
+            </div>
+        </StyledFav>
+
+    )
+
 }
