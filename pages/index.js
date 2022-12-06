@@ -1,7 +1,6 @@
 import React from "react";
 import config from "../config.json";
 import styled from "styled-components";
-import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 import { StyledFav } from "../src/components/Favorites";
@@ -15,7 +14,7 @@ function HomePage() {
 
     return (
         <>
-            <CSSReset />
+            <div/>
             <div style={{
                 display: "flex",
                 flexDirection: "column",
@@ -33,6 +32,9 @@ function HomePage() {
 export default HomePage
 
 const StyledHeader = styled.div`
+
+    background-color: ${({theme}) => theme.backgroundLevel1};
+
     .InfoU{
         display: flex;
         flex-direction: row;
@@ -65,7 +67,7 @@ function Header() {
         <StyledHeader>
             <StyledBanner/>
             <section className="InfoU">
-                <img id="giticon" src={`https://github.com/${config.github}.png`} />
+            <a href="https://github.com/Juanzeen">   <img id="giticon" src={`https://github.com/${config.github}.png`} /> </a>
                 <div className="ttlanddesc">
                     <h2 >{config.name}</h2>
                     <p id="desc">{config.desc}</p>
@@ -115,7 +117,7 @@ function Favorites(props) {
     return (
         <StyledFav>
             <h2>Favoritos</h2>
-            <div>
+            <div key={"favorites"}>
                 {favs.map(criadores => {
                     return (
                         <section>

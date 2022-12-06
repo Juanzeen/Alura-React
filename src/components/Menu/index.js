@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import DarkModeSwitch from "./components/DarkModeSwitch";
 import Search from "./components/Search";
 
 const StyledMenu = styled.header`
@@ -16,10 +17,11 @@ const StyledMenu = styled.header`
   .logo {
     width: 100%;
     max-width: 80px;
-    text-shadow: 2px 2px blue;
+    //text-shadow: 2px 2px blue;
+    color: ${({ theme }) => theme.textColorBase};
     @media (min-width: 600px) {
       max-width: 127px;
-      scroll-snap-type: x mandatory
+      scroll-snap-type: x mandatory;
     }
     .text {
       fill: ${({ theme }) => theme.textColorBase || "#222222"};
@@ -34,12 +36,13 @@ export default function Menu({valorFiltro, setValorFiltro}) {
         <Logo />
       </div>
       <Search  valorFiltro={valorFiltro} setValorFiltro={setValorFiltro}/>
+      <DarkModeSwitch/>
     </StyledMenu>
   );
 }
 
 function Logo() {
   return (
-    <h2>Projeto Alura</h2>
+    <h2 className="logo">Projeto Alura</h2>
   )
 }

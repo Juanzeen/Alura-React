@@ -50,6 +50,11 @@ export  const StyledFav = styled.div`
     flex-wrap: wrap;
     font-size: 14px;
     text-align: center;
+    opacity: 0.7;
+  }
+
+  a:hover,a:active,a:link,a:visited{
+    color: none;
   }
 
   
